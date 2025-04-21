@@ -9,8 +9,8 @@ import os
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 # CSV読み込み
-csv_url = st.secrets["CSV_URL"]
-df = pd.read_csv(csv_url)
+#csv_url = st.secrets["CSV_URL"]
+df = pd.read_csv("koubai_rireki.csv")
 
 # 画像表示（任意）
 try:
