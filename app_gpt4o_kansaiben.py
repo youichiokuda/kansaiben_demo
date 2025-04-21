@@ -12,7 +12,7 @@ df = pd.read_csv("koubai_rireki.csv")
 
 # Streamlit UI
 st.title("文房具購買履歴AI（関西弁 + GPT-4o）")
-query = st.text_input("質問してや（例：ボールペンの単価どれくらいや？）")
+query = st.text_input("質問してや（例：ボールペンの単価なんぼやねん？）")
 
 # プロンプト強化：より自然でおもろい関西弁
 system_prompt = """
