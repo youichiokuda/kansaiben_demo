@@ -14,12 +14,6 @@ df = pd.read_csv("koubai_rireki.csv")
 # CSVの文字列表現（ChatGPTに投げる用）
 csv_summary = df.to_string(index=False)
 
-# 画像表示（任意）
-try:
-    img = Image.open("JBHC.png")
-    st.image(img, caption="JBHC AIワークショップ", use_container_width=True)
-except:
-    st.warning("画像が見つかりませんでした。")
 
 # タイトル（小さめ＆1行）
 st.markdown("""
@@ -35,6 +29,12 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
+# 画像表示（任意）
+try:
+    img = Image.open("JBHC.png")
+    st.image(img, caption="JBHC AIワークショップ", use_container_width=True)
+except:
+    st.warning("画像が見つかりませんでした。")
 # 質問入力
 query = st.text_input("質問してや（例：在庫切れの商品は？、一番高い商品は？）")
 
@@ -67,7 +67,7 @@ if query:
                 {"role": "user", "content": prompt}
             ]
         )
-        st.markdown("### 🧠 AIの答え：")
+        st.markdown("### 👀 AIの答え：")
         st.write(response.choices[0].message.content)
     except Exception as e:
         st.error(f"エラーが発生したで：{e}")
