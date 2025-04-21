@@ -3,6 +3,14 @@ import streamlit as st
 import pandas as pd
 from openai import OpenAI
 import os
+import streamlit as st
+from PIL import Image
+
+# 画像読み込み
+img = Image.open("JBHC.png")
+
+# 表示
+st.image(img, caption="JBHC AIワークショップの様子", use_column_width=True)
 
 # OpenAI クライアント
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
