@@ -10,7 +10,7 @@ from PIL import Image
 img = Image.open("JBHC.png")
 
 # 表示
-st.image(img, caption="JBHC AIワークショップの様子", use_column_width=True)
+st.image(img, caption="JBHC AIワークショップ", use_container_width=True)
 
 # OpenAI クライアント
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
