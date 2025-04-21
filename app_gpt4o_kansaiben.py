@@ -23,7 +23,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # 修正
-#st.image(img, caption="JBHC AIワークショップ", use_container_width=True)
+st.image(img, caption="JBHC AIワークショップ", use_container_width=True)
 
 # OpenAI クライアント
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
@@ -32,7 +32,7 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 df = pd.read_csv("koubai_rireki.csv")
 
 # Streamlit UI
-st.title("文房具購買履歴AI（関西弁 + GPT-4o）")
+#st.title("文房具購買履歴AI（関西弁 + GPT-4o）")
 query = st.text_input("質問してや（例：ボールペンの単価なんぼやねん？）")
 
 # プロンプト強化：より自然でおもろい関西弁
