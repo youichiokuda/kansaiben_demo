@@ -9,8 +9,21 @@ from PIL import Image
 # 画像読み込み
 img = Image.open("JBHC.png")
 
-# 表示
-st.image(img, caption="JBHC AIワークショップ", use_container_width=True)
+st.markdown("""
+<div style='
+    font-size:18px;
+    font-weight:bold;
+    text-align:center;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+'>
+文房具購買履歴AI（関西弁 + GPT-4o）
+</div>
+""", unsafe_allow_html=True)
+
+# 修正
+#st.image(img, caption="JBHC AIワークショップ", use_container_width=True)
 
 # OpenAI クライアント
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
