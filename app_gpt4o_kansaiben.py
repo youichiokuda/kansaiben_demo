@@ -25,7 +25,7 @@ st.markdown("""
     overflow:hidden;
     text-overflow:ellipsis;
 '>
-文房具購買履歴AI（関西弁 + GPT-4o）
+文房具購買履歴AI（関西弁 + 生成AI）
 </div>
 """, unsafe_allow_html=True)
 
